@@ -45,13 +45,14 @@
       <td>{{$registro->Fechaavencimiento}}</td>
       <td>{{$registro->IGV}}</td>
       <td>
-          <a class="btn btn-sm btn-info" href=""><i class="fas fa-pencil-alt"></i></a>
-          <a class="btn btn-sm btn-danger" href=""><i class="fas fa-trash-alt"></i></a>
+          <a class="btn btn-sm btn-info" href="{{route('ventas.edit',$registro->id)}}"><i class="fas fa-pencil-alt"></i></a>
+          <a class="btn btn-sm btn-danger" href="{{route('ventas.show',$registro->id)}}"><i class="fas fa-trash-alt"></i></a>
       </td>
     </tr>
     @endforeach
   </tbody>
 </table>
     </div>
+@include('layout.script_pie')
 </body>
 </html>
